@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffeef8, #fff0f8);
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: system-ui, sans-serif;
+    line-height: 1.7;
+    color: #333;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.2);
+}
+
+.item img {
+    width: 320px;
+    /* ảnh to sole như mày muốn */
+    height: auto;
+    border-radius: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.item.reverse {
+    flex-direction: row-reverse;
+}
+
+.item .text h4,
+.item .text h3 {
+    color: #e91e63;
+    margin-bottom: 16px;
+}
+
+.item .text p {
+    font-size: 1.1rem;
+}
+
+div.loidan h2 {
+    align-items: center;
+}
+
+/* Mobile: xếp dọc đẹp lung linh */
+@media (max-width: 768px) {
+
+    .item,
+    .item.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .item img {
+        width: 260px;
+    }
+}
